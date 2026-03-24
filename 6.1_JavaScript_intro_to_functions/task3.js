@@ -9,4 +9,4 @@ function checkOrder (available, ordered){
 
 };
 
-console.log(checkOrder(10, 10));
+console.log(checkOrder(10, 8));
