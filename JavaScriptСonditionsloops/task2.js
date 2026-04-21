@@ -15,5 +15,3 @@ switch (true) {
     case averageGrade >= 91 && averageGrade <= 100:
         console.log("Відмінно");
         break;    
-}
-
