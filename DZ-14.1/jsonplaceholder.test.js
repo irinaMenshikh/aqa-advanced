@@ -1,10 +1,10 @@
+/* eslint-disable no-undef */
 const axios = require('axios');
-
 const BASE_URL = 'https://jsonplaceholder.typicode.com';
 
 describe('JSONPlaceholder API tests', () => {
 
-  // 1. GET - отримати конкретний пост
+
   test('GET /posts/1 - повертає пост з id 1', async () => {
     const response = await axios.get(`${BASE_URL}/posts/1`);
 
@@ -15,7 +15,7 @@ describe('JSONPlaceholder API tests', () => {
     expect(response.data).toHaveProperty('userId');
   });
 
-  // 2. GET - отримати конкретного користувача
+
   test('GET /users/1 - повертає користувача з id 1', async () => {
     const response = await axios.get(`${BASE_URL}/users/1`);
 
@@ -25,7 +25,7 @@ describe('JSONPlaceholder API tests', () => {
     expect(response.data).toHaveProperty('email');
   });
 
-  // 3. GET - отримати коментарі до посту
+
   test('GET /comments?postId=1 - повертає масив коментарів', async () => {
     const response = await axios.get(`${BASE_URL}/comments`, {
       params: { postId: 1 }
@@ -41,7 +41,7 @@ describe('JSONPlaceholder API tests', () => {
     });
   });
 
-  // 4. POST - створити новий пост
+ 
   test('POST /posts - створює новий пост', async () => {
     const newPost = {
       title: 'foo',
